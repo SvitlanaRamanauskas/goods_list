@@ -1,0 +1,29 @@
+@mixin on-tablet {
+  @media(min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media(min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin page-grid {
+  --columns: 1;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+
+  @include on-tablet() {
+    --columns: 2;
+    gap: 20px;
+  }
+
+  @include on-desktop() {
+    --columns: 3;
+    gap: 25px;
+  }
+}

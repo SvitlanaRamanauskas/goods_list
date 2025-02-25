@@ -1,0 +1,84 @@
+@import '../../style/mixins';
+@import '../../style//variables.scss';
+@import 'normalize.css';
+
+.card {
+  border: 1px solid #dd7901;
+  border-radius: 4px;
+  height: 400px;
+  padding: 15px;
+  display: grid;
+  grid-template-rows: 70% 2fr 1fr 1fr 1fr;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @include on-tablet {
+    height: 500px;
+  }
+
+  &__image {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    grid-row: 1/2;
+    padding-bottom: 10px;
+  }
+
+  &__info {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    &--title {
+      grid-row: 2/3;
+    }
+    &--price {
+      grid-row: 3/4;
+    }
+    &--category {
+      grid-row: 4/5;
+    }
+
+    @include on-desktop {
+      text-align: center;
+    }
+   
+  }
+
+
+  &__button {
+    background-color: $main-color;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s, color  0.3s, border 0.3s;
+
+    &:hover {
+      background-color: white;
+      color: $main-color;
+      border: 1px solid $main-color;
+    }
+
+    @include on-desktop {
+      width: 80%;
+    }
+
+    &-wrapper {
+      grid-row: 5/6;
+      display: flex;
+      justify-content: center;
+      height: 40px;
+    }
+  }
+
+
+
+}

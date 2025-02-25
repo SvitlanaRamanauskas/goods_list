@@ -1,0 +1,44 @@
+@import '../../style/mixins.scss';
+@import '../../style/variables.scss'; 
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+
+  @include on-tablet {
+    gap: 20px;
+  }
+
+  &__item {
+    border: 1px solid $main-color;
+    color: $main-color;
+
+    &--active {
+      font-weight: 700;
+    }
+
+    &--disabled {
+      border-color: $not-active-color;
+      color: $not-active-color;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+    text-decoration: none;
+    color: $main-color;
+  
+
+    @include on-tablet {
+      line-height: 25px;
+      height: 25px;
+      width: 25px;
+    }
+  }
+}

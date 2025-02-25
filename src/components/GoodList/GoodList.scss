@@ -1,0 +1,11 @@
+@import '../../style/mixins';
+@import 'normalize.css';
+
+.list {
+  @include page-grid;
+  list-style: none;
+
+  &__item {
+    text-decoration: none;
+  }
+}

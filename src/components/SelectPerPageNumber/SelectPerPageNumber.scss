@@ -1,0 +1,14 @@
+@import "../../style/variables";
+@import "../../style/mixins";
+
+.select {
+  &__window {
+    border-color: $main-color;
+    color: $main-color;
+
+  }
+
+  &__label {
+   color: $main-color; 
+ }
+}
