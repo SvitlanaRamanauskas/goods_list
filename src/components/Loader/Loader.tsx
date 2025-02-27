@@ -4,7 +4,7 @@ import "./Loader.scss";
 export const Loader: React.FC = () => {
   return (
     <div className="loader-container">
-        <span className="loader"></span>
+      <span className="loader"></span>
     </div>
   );
 };

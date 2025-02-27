@@ -1,10 +1,7 @@
 import React from "react";
-
 import { GoodCard } from "../GoodCard/GoodCard";
 import { Good } from "../../types/Good";
 import './GoodList.scss';
-
-
 
 type Props = {
   visibleGoods: Good[],
@@ -19,7 +16,6 @@ export const GoodList: React.FC<Props> = ({ visibleGoods }) => {
              good={good} />
           </li>
         ))}
-
     </ul>
   )
 }
