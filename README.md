@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# good_list | React+TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can find the Demo of the application here below:
 
-## Available Scripts
+* [DEMO](https://svitlanaramanauskas.github.io/goods_list)
 
-In the project directory, you can run:
+# Running the Project Locally
 
-### `npm start`
+To run this project locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clone the Repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+git clone https://github.com/SvitlanaRamanauskas/goods_list.git
+cd goods_list
+```
 
-### `npm test`
+- Install Dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install dependences using npm (Node Package Manager). Ensure you have Node.js installed on your machine. This project uses Node v20.
 
-### `npm run build`
+```npm install```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Run the Project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the development server with live reloading:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```npm start```
 
-### `npm run eject`
+Alternatively, you can use any other local server setup you prefer, such as Live Server for VS Code.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Open the Project in Your Browser:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Visit http://localhost:5000 or the port your server specifies to see the landing page in action.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Additional Setup (If Applicable)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Setting Up TypeScript:
 
-## Learn More
+This project uses TypeScript for static type checking. If you need to modify TypeScript settings, make sure the tsconfig.json file is properly configured.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```npm install typescript --save-dev```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Setting Up SCSS:
 
-### Code Splitting
+The project uses SCSS for styling. Create React App automatically supports SCSS, but you need to have sass installed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```npm install sass --save-dev```
+This allows you to use .scss files for your styles.
