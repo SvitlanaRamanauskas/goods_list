@@ -1,5 +1,5 @@
 @import '../../style/mixins';
-@import '../../style/variables'; 
+@import '../../style/variables';
 
 .pagination {
   display: flex;
@@ -33,7 +33,7 @@
     width: 20px;
     text-decoration: none;
     color: $main-color;
-  
+
     @include on-tablet {
       line-height: 25px;
       height: 25px;

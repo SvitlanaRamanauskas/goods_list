@@ -1,5 +1,5 @@
-import React from "react";
-import "./Pagination.scss";
+import React from 'react';
+import './Pagination.scss';
 
 type Props = {
   perPage: number;
@@ -18,7 +18,7 @@ export const Pagination: React.FC<Props> = ({
 
   const pageNumbers: number[] = Array.from(
     { length: pageCount },
-    (_, i) => i + 1
+    (_, i) => i + 1,
   );
 
   const handleOpenPrevPage = () =>
@@ -36,8 +36,8 @@ export const Pagination: React.FC<Props> = ({
       <li
         className={
           currentPage === 1
-            ? "pagination__item  pagination__item--disabled"
-            : "pagination__item"
+            ? 'pagination__item  pagination__item--disabled'
+            : 'pagination__item'
         }
       >
         <a
@@ -56,8 +56,8 @@ export const Pagination: React.FC<Props> = ({
           key={pageNumber}
           className={
             pageNumber === currentPage
-              ? "pagination__item pagination__item--active"
-              : "pagination__item"
+              ? 'pagination__item pagination__item--active'
+              : 'pagination__item'
           }
         >
           <a
@@ -73,8 +73,8 @@ export const Pagination: React.FC<Props> = ({
       <li
         className={
           currentPage === pageCount
-            ? "pagination__item pagination__item--disabled"
-            : "pagination__item"
+            ? 'pagination__item pagination__item--disabled'
+            : 'pagination__item'
         }
       >
         <a

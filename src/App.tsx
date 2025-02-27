@@ -1,15 +1,19 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
-import "./App.scss";
-import { getGoods } from "./helper/fetch";
-import { Good } from "./types/Good";
-import { GoodList } from "./components/GoodList/GoodList";
-import { Pagination } from "./components/Pagination";
-import { Select } from "./components/Select";
-import { Loader } from "./components/Loader";
-import { Cart } from "./components/Cart";
-import { AppContext } from "./components/AppContext";
+import React, { useCallback, useContext, useEffect, useState } from 'react';
+import './App.scss';
+import { getGoods } from './helper/fetch';
+import { Good } from './types/Good';
+import { GoodList } from './components/GoodList/GoodList';
+import { Pagination } from './components/Pagination';
+import { Select } from './components/Select';
+import { Loader } from './components/Loader';
+import { Cart } from './components/Cart';
+import { AppContext } from './components/AppContext';
 
-const itemsPerPageOptions = ["6", "12", "18"];
+const itemsPerPageOptions = ['6', '12', '18'];
+
+enum Categories {
+  All = 'All',
+}
 
 function App() {
   const [goods, setGoods] = useState<Good[]>([]);
@@ -17,7 +21,7 @@ function App() {
   const [errorGettingGoods, setErrorGettingGoods] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [perPage, setPerPage] = useState(6);
-  const [byCategory, setByCategory] = useState("");
+  const [byCategory, setByCategory] = useState('');
   const [isCartOpen, setIsCartOpen] = useState(false);
   const { cartItems } = useContext(AppContext);
 
@@ -27,25 +31,21 @@ function App() {
     getGoods()
       .then((data) => setGoods(data))
       .catch(() => setErrorGettingGoods(true))
-      .finally(() => {
-        setTimeout(() => {
-          setLoadingGoods(false);
-        }, 1000);
-      });
+      .finally(() => setLoadingGoods(false));
   }, [perPage]);
 
   const startIndex = (currentPage - 1) * perPage;
   const endIndex = startIndex + perPage;
 
   const filteredGoods =
-    byCategory === "" || byCategory === "All"
+    byCategory === '' || byCategory === 'All'
       ? goods
       : goods.filter((good) => good.category === byCategory);
 
   const displayedGoods = filteredGoods.slice(startIndex, endIndex);
 
   const categoriesList = [
-    "All",
+    Categories.All,
     ...new Set(goods.map((good) => good.category)),
   ];
 
@@ -55,7 +55,7 @@ function App() {
         setCurrentPage(page);
       }
     },
-    [currentPage]
+    [currentPage],
   );
 
   const handleFilterByCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -79,7 +79,7 @@ function App() {
           onClick={() => setIsCartOpen(true)}
         >
           <img
-            src={`${process.env.PUBLIC_URL}/icons/icons8-cart-50 (2).png`}
+            src={`${process.env.PUBLIC_URL}/icons/icons8-cart-50.png`}
             alt=""
             className="header__cart"
           />
@@ -112,9 +112,7 @@ function App() {
 
         {loadingGoods && !errorGettingGoods && <Loader />}
 
-        {!loadingGoods && errorGettingGoods && (
-          <h3>Error loading products</h3>
-        )}
+        {!loadingGoods && errorGettingGoods && <h3>Error loading products</h3>}
 
         {!loadingGoods && !errorGettingGoods && (
           <section className="main__section">

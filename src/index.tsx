@@ -9,10 +9,10 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-       <AppProvider>
-          <App />
-       </AppProvider>
-    </React.StrictMode>
+      <AppProvider>
+        <App />
+      </AppProvider>
+    </React.StrictMode>,
   );
 } else {
   console.error('Root element not found');

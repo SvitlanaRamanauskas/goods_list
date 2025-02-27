@@ -29,7 +29,7 @@
   }
 
   &__info {
-    font-family: "RobotoCondensed";
+    font-family: 'RobotoCondensed';
     font-size: 1em;
     font-weight: 500;
     text-transform: uppercase;
@@ -59,7 +59,10 @@
     border: none;
     border-radius: 4px;
     width: 100%;
-    transition: background-color 0.3s, color  0.3s, border 0.3s;
+    transition:
+      background-color 0.3s,
+      color 0.3s,
+      border 0.3s;
 
     &:hover {
       background-color: $second-color;

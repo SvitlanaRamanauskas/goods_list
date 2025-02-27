@@ -1,1 +1,1 @@
-export * from "./GoodCard";
+export * from './GoodCard';

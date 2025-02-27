@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { AppContext } from "../AppContext";
-import "./Cart.scss";
-import { Good } from "../../types/Good";
+import React, { useContext } from 'react';
+import { AppContext } from '../AppContext';
+import './Cart.scss';
+import { Good } from '../../types/Good';
 
 type Props = {
   onOpenCart: (value: boolean) => void;
@@ -13,7 +13,7 @@ export const Cart: React.FC<Props> = ({ onOpenCart }) => {
   const removeFromCart = (id: number) => {
     setCartItems((prev: Good[]) => {
       const updatedCart = prev.filter((item: Good) => item.id !== id);
-      localStorage.setItem("cart", JSON.stringify(updatedCart)); // Save updated cart
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
       return updatedCart;
     });
   };

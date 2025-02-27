@@ -1,5 +1,5 @@
-@import "../../style/variables";
-@import "../../style/mixins";
+@import '../../style/variables';
+@import '../../style/mixins';
 
 .cart {
   position: fixed;
@@ -18,9 +18,9 @@
     position: relative;
     padding-inline: 20px;
     margin-inline: 0;
-    width: 100%; 
-    max-width: 1024px; 
-    margin: 0 auto; 
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
     box-sizing: border-box;
   }
 
@@ -40,9 +40,9 @@
     height: 60px;
     object-fit: contain;
 
-   @include on-tablet {
-    height: 80px;
-   }
+    @include on-tablet {
+      height: 80px;
+    }
   }
 
   &__item {
@@ -58,7 +58,7 @@
     &-title {
       @include on-tablet {
         width: 40%;
-      }        
+      }
     }
 
     &-text {
@@ -74,7 +74,7 @@
 
       @include on-tablet {
         height: 80px;
-       }
+      }
     }
 
     &-info-wrapper {
@@ -100,7 +100,7 @@
       justify-content: center;
       border: none;
       background-color: transparent;
-      font-family: "RobotoCondensed";
+      font-family: 'RobotoCondensed';
       border: 1px solid $main-color;
       box-sizing: border-box;
 
@@ -133,10 +133,15 @@
 
   &__close {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 30px;
+    top: 30px;
     background-color: transparent;
     border: 1px solid $main-color;
     border-radius: 4px;
+
+    &-img {
+      width: 20px;
+      height: 20px;
+    }
   }
 }

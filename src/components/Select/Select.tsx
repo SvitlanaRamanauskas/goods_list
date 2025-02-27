@@ -1,5 +1,5 @@
-import React from "react";
-import "./Select.scss";
+import React from 'react';
+import './Select.scss';
 
 type Props = {
   onSelectChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;

@@ -1,5 +1,5 @@
-@import "../../style/variables";
-@import "../../style/mixins";
+@import '../../style/variables';
+@import '../../style/mixins';
 
 .select {
   &__window {
@@ -7,18 +7,18 @@
     color: $main-color;
     height: 30px;
     cursor: pointer;
-    
+
     &:hover {
       border-color: $border-color;
     }
   }
 
   &__label {
-   color: $main-color; 
-   text-transform: uppercase;
-   display: flex;
-   flex-direction: column;
-   gap: 5px;
-   align-items: flex-end;
- }
+    color: $main-color;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+  }
 }
