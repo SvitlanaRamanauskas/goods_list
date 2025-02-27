@@ -32,6 +32,7 @@ export const GoodCard: React.FC<Props> = ({ good }) => {
             'card__button card__button--chosen': isInCart(good),
           })}
           onClick={() => addToCart(good)}
+          disabled={isInCart(good)}
         >
           {isInCart(good) ? 'added to cart' : 'add to cart'}
         </button>
