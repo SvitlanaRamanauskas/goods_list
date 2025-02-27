@@ -9,7 +9,7 @@ type ContextType = {
 type Props = {
   children: React.ReactNode;
 };
-
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 export const AppContext = React.createContext<ContextType>({
   cartItems: [],
   setCartItems: () => {},

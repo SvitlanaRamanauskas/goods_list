@@ -1,26 +1,26 @@
-@import '~normalize.css';
-@import './style/variables.scss';
+@import "~normalize.css";
+@import "./style/variables.scss";
 
 @font-face {
-  font-family: 'RobotoCondensed';
-  src: url('./fonts/Roboto_Condensed/static/RobotoCondensed-Light.ttf')
-    format('woff2');
+  font-family: "RobotoCondensed";
+  src: url("./fonts/Roboto_Condensed/static/RobotoCondensed-Light.ttf")
+    format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'RobotoCondensed';
-  src: url('./fonts/Roboto_Condensed/static/RobotoCondensed-Medium.ttf')
-    format('truetype');
+  font-family: "RobotoCondensed";
+  src: url("./fonts/Roboto_Condensed/static/RobotoCondensed-Medium.ttf")
+    format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'RobotoCondensed';
-  src: url('./fonts/Roboto_Condensed/static/RobotoCondensed-Bold.ttf')
-    format('truetype');
+  font-family: "RobotoCondensed";
+  src: url("./fonts/Roboto_Condensed/static/RobotoCondensed-Bold.ttf")
+    format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -40,7 +40,7 @@ p,
 h1 {
   margin: 0;
   padding: 0;
-  font-family: 'RobotoCondensed', sans-serif;
+  font-family: "RobotoCondensed", sans-serif;
   color: $main-color;
 }
 ul {

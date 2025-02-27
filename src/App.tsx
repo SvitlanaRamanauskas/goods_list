@@ -31,7 +31,11 @@ function App() {
     getGoods()
       .then((data) => setGoods(data))
       .catch(() => setErrorGettingGoods(true))
-      .finally(() => setLoadingGoods(false));
+      .finally(() => {
+        setTimeout(() => {
+          setLoadingGoods(false);
+        }, 1000); // setTimeout - to show the loader
+      });
   }, [perPage]);
 
   const startIndex = (currentPage - 1) * perPage;

@@ -46,7 +46,7 @@ export const Cart: React.FC<Props> = ({ onOpenCart }) => {
                   </p>
                   <button
                     onClick={() => removeFromCart(item.id)}
-                    className="cart__item-text cart__item-delete"
+                    className="cart__button cart__item-delete"
                   >
                     <img
                       title="delete"
@@ -72,7 +72,10 @@ export const Cart: React.FC<Props> = ({ onOpenCart }) => {
           </div>
         </section>
 
-        <button onClick={() => onOpenCart(false)} className="cart__close">
+        <button
+          onClick={() => onOpenCart(false)}
+          className="cart__button cart__close"
+        >
           <img
             title="close"
             src={`${process.env.PUBLIC_URL}/icons/icons8-close-50.png`}

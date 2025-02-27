@@ -6,7 +6,7 @@
   height: 2em;
   margin: 1em auto;
   border: 0.3em solid #ddd;
-  border-left-color: #000;
+  border-left-color: $main-color;
   animation: spin-loader 1.2s infinite linear;
 
   &-container {
